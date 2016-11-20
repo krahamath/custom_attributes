@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Custom Attributes
-Plugin URI: https://github.com/sydcode/custom_attributes
-Description: Create custom attributes for your listings. Version 1.0.0 by <a href="http://forums.osclass.org/index.php?action=profile;u=12290" title="View sydcode's profile">sydcode</a>.<br />Download the latest version at <a href="http://sourceforge.net/projects/custom-attrs/" title="Visit SourceForce project page">SourceForge</a>. Follow developments at <a href="https://github.com/sydcode/custom_attributes" title="Visit GitHub project page">GitHub</a> and <a href="http://forums.osclass.org/plugins/(new-plugin)-custom-attributes/" title="Visit Osclass forums thread">Osclass Forums</a>.<br />Thanks to <a href="http://forums.osclass.org/index.php?action=profile;u=11728" title="View sharkey's profile">sharkey</a> for sponsoring this plugin. Also thanks to <a href="http://forums.osclass.org/index.php?action=profile;u=1728" title="View Jay's profile">Jay</a> and <a href="http://forums.osclass.org/index.php?action=profile;u=16575" title="View dienast's profile">dienast</a> for their improvements.
-Version: 1.0.0
+Plugin URI: https://github.com/krahamath/custom_attributes
+Description: Create custom attributes for your listings. 
+Version: 1.0.1
 Author: sydcode
-Author URI: http://forums.osclass.org/index.php?action=profile;u=12290
+Author URI: https://github.com/sydcode
 Short Name: custom_attributes
 Plugin update URI: custom_attributes
 
