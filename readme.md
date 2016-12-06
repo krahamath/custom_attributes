@@ -5,14 +5,14 @@ A plugin for [Osclass](http://osclass.org), a free and open source classifieds s
 This plugin allows custom attributes to be added to listings. 
 
 ## Version 1.0.1
-Bootstrap supported
+* Bootstrap supported
 
 ## Requirements
-Version 3.0 or greater
+Osclass 3.0 or greater
 
 ## Quick Start
-* Download the latest release [here](https://github.com/sydcode/custom_attributes/archive/master.zip)
-* Clone the git repo — git clone https://github.com/sydcode/custom_attributes.git
+* Download the latest release [here](https://github.com/krahamath/custom_attributes/archive/master.zip)
+* Clone the git repo — git clone https://github.com/krahamath/custom_attributes.git
 
 ## Features
 * Six input types (checkbox, date, radio, select, text, and textarea).
@@ -21,18 +21,10 @@ Version 3.0 or greater
 * Date input shows popup calendar for easy selection.
 * Alphabetical or custom ordering of attributes.
 * Attribute groups, with category selection and optional heading.
-* Theme stylesheets (Modern, Blender).
-
-## Credits
-* [sharkey](http://forums.osclass.org/index.php?action=profile;u=11728), who hired me to build this plugin.
-* [Jay](https://github.com/trains58554), who has fixed many bugs.
-* [dienast](https://github.com/dienast), for his slider input.
+* Theme stylesheets (Modern, Bender).
 
 ## Author
 * [sydcode](https://github.com/sydcode)
-
-## Questions
-This [Osclass forum thread](http://forums.osclass.org/plugins/%28new-plugin%29-custom-attributes/) is where you can follow developments and post questions.
 
 ## Licence
 This program is free software: you can redistribute it and/or modify
