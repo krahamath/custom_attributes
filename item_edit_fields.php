@@ -3,8 +3,7 @@ if ( !defined('ABS_PATH') ) {
 	exit('ABS_PATH is not loaded. Direct access is not allowed.');
 }
 ?>
-	<table>
-		<tbody>
+
 <?php
 foreach ($fields as $field) {
 	$field_id = $field['pk_i_id'];
@@ -30,37 +29,48 @@ foreach ($fields as $field) {
 		$value = Session::newInstance()->_getForm($name);
 	}	
 ?>
-			<tr class='edit_row'>
-				<input type='hidden' name='fields[]' value='<?php echo $field_id; ?>' />
-				<td><label class='edit_label' for='<?php echo $name; ?>'><?php echo $label; ?></label></td>
-				<td>
+
+<input type='hidden' name='fields[]' value='<?php echo $field_id; ?>' />
+<div class="form-group">
 <?php if ($type == 'checkbox') {  ?>
-<?php 	$checked = ($value == 'checked') ? " checked='checked'" : ''; ?>
-					<label>
-						<input id='<?php echo $name; ?>' class='edit_checkbox' type='checkbox' name='<?php echo $name; ?>' value='checked'<?php echo $checked; ?> />
-						<?php _e('Tick for "Yes"', CA_PLUGIN_NAME); ?>
-					</label>
-<?php } elseif ($type == 'date') { ?>	
-					<input id='<?php echo $name; ?>'<?php echo $class; ?> type='text' name='<?php echo $name; ?>' value='<?php echo $value; ?>' />
-<?php } elseif ($type == 'radio') { ?>						
-					<?php $this->radio_buttons($field_id, $name, $value, $required); ?>					
-<?php } elseif ($type == 'select') { ?>		
-					<select id='<?php echo $name; ?>'<?php echo $class; ?> name='<?php echo $name; ?>'>
-						<?php $this->select_options($field_id, $value); ?>
-					</select>
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<?php $checked = ($value == 'checked') ? " checked='checked'" : ''; ?>
+		<label>
+			<input id='<?php echo $name; ?>' class='edit_checkbox' type='checkbox' name='<?php echo $name; ?>' value='checked'<?php echo $checked; ?> />
+			<?php _e('Tick for "Yes"', CA_PLUGIN_NAME); ?>
+		</label>
+	</div>
+<?php } elseif ($type == 'date') { ?>
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<input id='<?php echo $name; ?>'<?php echo $class; ?> type='text' name='<?php echo $name; ?>' value='<?php echo $value; ?>' />
+	</div>
+<?php } elseif ($type == 'radio') { ?>
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<?php $this->radio_buttons($field_id, $name, $value, $required); ?>	
+	</div>
+<?php } elseif ($type == 'select') { ?>
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<select id='<?php echo $name; ?>'<?php echo $class; ?> name='<?php echo $name; ?>'>
+			<?php $this->select_options($field_id, $value); ?>
+		</select>
+	</div>
 <?php } elseif ($type == 'text') { ?>
-					<input id='<?php echo $name; ?>'<?php echo $class; ?> type='text' name='<?php echo $name; ?>' value='<?php echo $value; ?>' />
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<input id='<?php echo $name; ?>'<?php echo $class; ?> type='text' name='<?php echo $name; ?>' value='<?php echo $value; ?>' />
+	</div>
 <?php } elseif ($type == 'textarea') {  ?>
-					<textarea id='<?php echo $name; ?>'<?php echo $class; ?> name='<?php echo $name; ?>'><?php echo $value; ?></textarea>							
+	<label class='edit_label control-label' for='<?php echo $name; ?>'><?php echo $label; ?></label>
+	<div class="control">
+		<textarea id='<?php echo $name; ?>'<?php echo $class; ?> name='<?php echo $name; ?>'><?php echo $value; ?></textarea>
+	</div>
 <?php } ?>
-				</td>
-				<td>
-<?php if ($required) { ?>
-					<span class='required_input'><?php _e('Required', CA_PLUGIN_NAME); ?></span>
+</div>
+
 <?php } ?>
-				</td>
-			</tr>
-<?php } ?>
-		</tbody>
-	</table>
+
 <?php //END
